@@ -13,13 +13,13 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v2
-        name: executing remote ssh commands using password
+      - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1
         with:
-          host: ${{ secrets.HOST }}
-          username: linuxserver.io
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
+          host: 51.20.122.48
+          username: ubuntu
+          password: ${{ secrets.PRIVATE_SSH_KEY }}
+          port: 22
           script: whoami
       
        

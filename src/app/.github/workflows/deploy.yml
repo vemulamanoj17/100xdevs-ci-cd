@@ -16,11 +16,11 @@ jobs:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1
         with:
-          host: 51.20.122.48
+          host: 13.49.225.189
           username: ubuntu
-          key: ${{ secrets.PRIVATE_SSH_KEY }}
+          password: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
-          script: |
-            ls
+          script: whoami
+            
       
        
